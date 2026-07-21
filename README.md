@@ -131,7 +131,7 @@ MIT — feel free to use as a template or reference.
 **Maksym Dumych (Topazen)**
 
 - GitHub: [github.com/Topazen](https://github.com/Topazen)
-- LinkedIn: [Maksym Dumych](https://www.linkedin.com/in/maksym-dumych-98a68935b/)
+- LinkedIn: [Maksym Dumych](https://www.linkedin.com/in/maksym-dumych/)
 
 ---
 
