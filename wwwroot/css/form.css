@@ -1,0 +1,153 @@
+.form-group {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.text-danger {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.field-validation-error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem; 
+    display: block;
+}
+
+.input-validation-error {
+    border-color: #dc3545;
+}
+
+input.input-validation-error:focus,
+select.input-validation-error:focus,
+textarea.input-validation-error:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.validation-summary-errors {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+/* Style required fields */
+input:required,
+select:required,
+textarea:required {
+    border-left: 3px solid #f97316;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Custom select styling */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234a90e2' d='M2,4 L6,8 L10,4' stroke='currentColor' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 12px;
+    padding-right: 2.5rem;
+}
+
+.alert {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* File upload styling */
+input[type="file"] {
+    padding: 0.75rem;
+    border: 2px dashed #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: #f9fafb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 0.95rem;
+}
+
+input[type="file"]:hover {
+    border-color: #f97316;
+    background-color: #fff7ed;
+}
+
+input[type="file"]:focus {
+    outline: none;
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.file-upload-hint {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* reCAPTCHA styling */
+.captcha-group {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.g-recaptcha {
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .captcha-group {
+        transform: scale(0.85);
+        transform-origin: center;
+    }
+}
+
+/* Brand story wrapper: crop overflowing decorative elements (e.g. shield) */
+.brand-story-wrapper {
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    /* prevent box-shadow from bleeding outside rounded corners */
+    background-clip: padding-box;
+}
+
+/* Keep internal spacing but avoid extra bottom gaps so cropped edges look tidy */
+.brand-story-wrapper > * {
+    margin-bottom: 1rem;
+}
+
+.brand-story-wrapper img,
+.brand-story-wrapper svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Strong override in case other site styles load after this file */
+.brand-story .brand-story-wrapper {
+    overflow: hidden !important;
+    border-radius: 1rem !important;
+    background-clip: padding-box !important;
+}
+

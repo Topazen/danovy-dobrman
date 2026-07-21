@@ -1,0 +1,23 @@
+# robots.txt for Vedení účetnictví
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://danovydobrman.cz/sitemap.xml
+
+# Crawl delay (optional, be nice to servers)
+Crawl-delay: 1
+
+# Block certain paths if needed (uncomment if you have admin areas)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow specific important files
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Block duplicate content with query parameters (except lang)
+# Disallow: /*?*
+# Allow: /*?lang=*

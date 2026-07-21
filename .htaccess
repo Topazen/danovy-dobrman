@@ -1,0 +1,11 @@
+# Apache reverse-proxy configuration for ASP.NET Core (Kestrel on localhost:5000)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Proxy all requests to Kestrel unless the file/directory exists on disk
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ http://localhost:5000/$1 [P,L]
+</IfModule>
+
+Options +FollowSymLinks

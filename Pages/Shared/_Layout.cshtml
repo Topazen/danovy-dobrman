@@ -1,0 +1,248 @@
+@{
+    var title = ViewData["Title"] ?? "Bc. Šárka Cimburková - Daňový Dobrman";
+    var desc = ViewData["Description"] ?? "Profesionální daňové a účetní služby - osobní přístup, přesnost a důvěra.";
+    var lang = ViewData["Lang"] ?? "cs";
+}
+<!DOCTYPE html>
+<html lang="@lang">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>@title</title>
+    <meta name="description" content="@desc" />
+    <meta name="keywords" content="vedení účetnictví, daňové poradenství, účetní služby, mzdová agenda, daňová evidence, OSVČ, s.r.o., účetní Plzeň, daňový poradce, Bc. Šárka Cimburková" />
+    <meta name="geo.region" content="CZ-PL" />
+    <meta name="geo.placename" content="Plzeň" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="@Context.Request.Scheme://@Context.Request.Host@Context.Request.Path" />
+    <meta property="og:title" content="@title" />
+    <meta property="og:description" content="@desc" />
+    <!-- TODO: Check if og-image.png exists, otherwise fallback or ensure it is generated -->
+    <meta property="og:image" content="@Context.Request.Scheme://@Context.Request.Host/images/og-image.png" />
+    <meta property="og:site_name" content="Bc. Šárka Cimburková - Daňový Dobrman" />
+    <meta property="og:locale" content="cs_CZ" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="@Context.Request.Scheme://@Context.Request.Host@Context.Request.Path" />
+    <meta name="twitter:title" content="@title" />
+    <meta name="twitter:description" content="@desc" />
+    <meta name="twitter:image" content="@Context.Request.Scheme://@Context.Request.Host/images/twitter-card.png" />
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Bc. Šárka Cimburková - Daňový Dobrman" />
+    <meta name="theme-color" content="#f97316" />
+    <link rel="canonical" href="@Context.Request.Scheme://@Context.Request.Host@Context.Request.Path" />
+
+
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://code.jquery.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="~/css/modern.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/animations.css" asp-append-version="true" />
+
+    <!-- Favicon — using logo.png as fallback; a proper multi-resolution .ico generated from the logo would be preferable -->
+    <link rel="icon" type="image/png" href="~/images/logo.png" />
+
+    <!-- Ensure content is visible when JS is disabled -->
+    <noscript><style>.reveal-on-scroll, .scroll-reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": ["AccountingService", "LocalBusiness"],
+        "name": "Bc. Šárka Cimburková - Daňový Dobrman",
+        "description": "@desc",
+        "url": "@Context.Request.Scheme://@Context.Request.Host",
+        "telephone": "+420721759410",
+        "email": "s.cimbur73@@gmail.com",
+        "priceRange": "3000 Kč - 15000 Kč",
+        "address": {
+            "@@type": "PostalAddress",
+            "streetAddress": "Slovanské údolí 357/20",
+            "addressLocality": "Plzeň",
+            "postalCode": "326 00",
+            "addressRegion": "Plzeňský kraj",
+            "addressCountry": "CZ"
+        },
+        "geo": {
+            "@@type": "GeoCoordinates",
+            "latitude": "49.7477",
+            "longitude": "13.3775"
+        },
+        "openingHoursSpecification": {
+            "@@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
+        "aggregateRating": {
+            "@@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "serviceType": ["Vedení účetnictví", "Daňové poradenství", "Mzdové služby"],
+        "areaServed": {
+            "@@type": "City",
+            "name": "Plzeň"
+        }
+    }
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4NMGBLPD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4D4NMGBLPD', {
+            'page_title': '@title',
+            'page_path': '@Context.Request.Path'
+        });
+    </script>
+    
+    <!-- jQuery and unobtrusive validation -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>window.jQuery || document.write('<script src="~/js/jquery-3.6.4.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+    
+    <!-- Google reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    <script src="~/js/analytics.js" asp-append-version="true" defer></script>
+    <script src="~/js/app.js" asp-append-version="true" defer></script>
+    <script src="~/js/pricing-services.js" asp-append-version="true" defer></script>
+    <script src="~/js/animations.js" asp-append-version="true" defer></script>
+</head>
+<body>
+    <!-- Floating Particles Background -->
+    <div class="particles" aria-hidden="true">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+        <header class="site-header">
+        <div class="container header-inner">
+            <!-- Hamburger Menu Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            
+            <a class="brand-logo" asp-page="/Index" asp-route-lang="@lang">
+                <img src="~/images/logo.png" alt="Bc. Šárka Cimburková - Daňový Dobrman" class="logo-image" />
+                <div class="brand-text">
+                    <span class="brand-name">Bc. Šárka Cimburková</span>
+                    <span class="brand-tagline">Daňový Dobrman</span>
+                </div>
+            </a>
+
+            <nav class="nav-right" aria-label="Main navigation">
+                <a href="#services" class="nav-link">Služby</a>
+                <a href="#pricing" class="nav-link">Ceník</a>
+                <a href="#process" class="nav-link">Proces</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#order" class="nav-link">Kontakt</a>
+            </nav>
+        </div>
+        
+        <!-- Navigation Menu Overlay -->
+        <div class="menu-overlay" id="menuOverlay"></div>
+        <nav class="nav-menu" id="navMenu" aria-modal="true" tabindex="-1">
+            <div class="nav-menu-content">
+                <h3 class="nav-menu-title">Menu</h3>
+                <ul class="nav-menu-list">
+                    <li><a href="#hero" class="nav-menu-link">🏠 Úvod</a></li>
+                    <li><a href="#brand-story" class="nav-menu-link">🐾 Náš příběh</a></li>
+                    <li><a href="#services" class="nav-menu-link">🎯 Služby</a></li>
+                    <li><a href="#approach" class="nav-menu-link">💼 Náš přístup</a></li>
+                    <li><a href="#process" class="nav-menu-link">🔄 Proces spolupráce</a></li>
+                    <li><a href="#pricing" class="nav-menu-link">💰 Ceník</a></li>
+                    <li><a href="#faq" class="nav-menu-link">❓ FAQ</a></li>
+                    <li><a href="#order" class="nav-menu-link">📬 Kontakt</a></li>
+                    <li><a href="#testimonials" class="nav-menu-link">⭐ Reference</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        @RenderBody()
+    </main>
+
+    <!-- Mobile quick-access is intentionally left out of layout; inserted per-page where needed -->
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <p>&copy; @DateTime.Now.Year Bc. Šárka Cimburková - Daňový Dobrman</p>
+                <p>Tel: <a href="tel:+420721759410">+420 721 759 410</a> &nbsp; Email: <a href="mailto:s.cimbur73@gmail.com">s.cimbur73@gmail.com</a></p>
+                <p class="footer-address">📍 Slovanské údolí 357/20, Plzeň</p>
+            </div>
+            <div>
+                <small>Jednoduchá a bezpečná správa účetnictví. Připraveno pro integraci platebních bran.</small>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- GDPR Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h3>🍪 Používáme cookies</h3>
+                <p>Tento web používá cookies pro zlepšení uživatelského zážitku a analýzu návštěvnosti.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button onclick="acceptCookies()" class="btn-accept">Přijmout vše</button>
+                <button onclick="declineCookies()" class="btn-decline">Odmítnout</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Cookie Banner Logic
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').style.display = 'none';
+            // Enable Google Analytics tracking
+            gtag('consent', 'update', {
+                'analytics_storage': 'granted'
+            });
+        }
+        
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieBanner').style.display = 'none';
+            // Disable Google Analytics tracking
+            gtag('consent', 'update', {
+                'analytics_storage': 'denied'
+            });
+        }
+        
+        // Show banner if user hasn't made a choice
+        window.addEventListener('DOMContentLoaded', function() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                setTimeout(function() {
+                    document.getElementById('cookieBanner').style.display = 'flex';
+                }, 1000);
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+@{
+    // Site is fully responsive via CSS — single layout for all devices.
+    // A "view" cookie can still override for testing: set view=desktop or view=mobile.
+    var layout = "_Layout";
+    var cookies = Context.Request.Cookies;
+    if (cookies != null && cookies.ContainsKey("view"))
+    {
+        var v = cookies["view"]?.ToString();
+        if (!string.IsNullOrEmpty(v))
+        {
+            if (v.Equals("mobile", System.StringComparison.OrdinalIgnoreCase)) layout = "_Layout";
+            if (v.Equals("desktop", System.StringComparison.OrdinalIgnoreCase)) layout = "_Layout";
+        }
+    }
+
+    Layout = layout;
+}

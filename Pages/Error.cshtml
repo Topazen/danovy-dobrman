@@ -1,0 +1,67 @@
+@page
+@using UcetnictviSite.Pages
+@model ErrorModel
+@{
+    ViewData["Title"] = "Chyba";
+}
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Bc. Šárka Cimburková</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+        }
+        .error-code {
+            font-size: 6rem;
+            font-weight: bold;
+            color: #f97316;
+            margin: 0;
+        }
+        .error-message {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 1rem 0;
+        }
+        .error-description {
+            font-size: 1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 1rem 0 2rem 0;
+        }
+        .btn-home {
+            display: inline-block;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+        .btn-home:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1 class="error-code">Oops!</h1>
+        <h2 class="error-message">Něco se pokazilo</h2>
+        <p class="error-description">
+            Omlouváme se, ale došlo k neočekávané chybě. Náš tým byl o problému informován a pracujeme na jeho řešení.
+        </p>
+        <a href="/" class="btn-home">Zpět na hlavní stránku</a>
+    </div>
+</body>
+</html>

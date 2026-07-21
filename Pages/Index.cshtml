@@ -1,0 +1,517 @@
+@page
+@using UcetnictviSite.Pages
+@model IndexModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = Model.Texts["Title"];
+    ViewData["Description"] = Model.Texts["Description"];
+    ViewData["Lang"] = Model.Lang;
+}
+
+<section id="hero" class="hero" aria-labelledby="hero-title">
+    <div class="hero-logo" aria-hidden="true"></div>
+    <div class="business-name">
+        <span class="business-name-main">Bc. Šárka Cimburková</span>
+        <span class="business-name-tagline">Daňový Dobrman</span>
+    </div>
+    <h1 id="hero-title">@Model.Texts["HeroTitle"]</h1>
+    <p class="lead">@Model.Texts["HeroSubtitle"]</p>
+    <div class="hero-ctas">
+        <a class="btn primary" href="#order">@Model.Texts["OrderNow"]</a>
+        <a class="btn outline" href="#services">@Model.Texts["OurServices"]</a>
+    </div>
+</section>
+
+<!-- Mobile Quick Access Menu (placed under hero for mobile) -->
+<div class="mobile-quick-access">
+    <a href="#services" class="quick-access-card quick-access-services">
+        <div class="quick-access-icon">📊</div>
+        <div class="quick-access-label">Služby</div>
+    </a>
+    <a href="#pricing" class="quick-access-card quick-access-pricing">
+        <div class="quick-access-icon">💰</div>
+        <div class="quick-access-label">Ceník</div>
+    </a>
+    <a href="#order" class="quick-access-card quick-access-contact">
+        <div class="quick-access-icon">📬</div>
+        <div class="quick-access-label">Kontakt</div>
+    </a>
+    <a href="tel:+420721759410" class="quick-access-card quick-access-call">
+        <div class="quick-access-icon">📞</div>
+        <div class="quick-access-label">Zavolat</div>
+    </a>
+</div>
+
+<!-- Brand Story Section -->
+<section id="brand-story" class="brand-story" aria-labelledby="brand-story-title">
+    <div class="brand-story-wrapper">
+        <div class="brand-story-content-side">
+            <h2 id="brand-story-title">Proč právě Daňový dobrman</h2>
+            
+            <div class="brand-story-text">
+                <p class="brand-story-intro">
+                    Název <strong>Daňový dobrman</strong> odkazuje na příběh Karla Dobermanna - výběrčího daní, 
+                    který vyšlechtil svého věrného společníka, aby ho chránil při práci.
+                </p>
+                
+                <div class="brand-story-details">
+                    <p>
+                        Dobrman byl vyšlechtěn v 19. století v Německu mužem jménem <strong>Karl Friedrich Louis Dobermann</strong> - 
+                        výběrčím daní, strážníkem a správcem psince.
+                    </p>
+                    <p>
+                        Při své práci potřeboval psa, který by ho chránil při obchůzkách a výběru peněz. 
+                        Hledal společníka, který bude <strong>odvážný, spolehlivý, chytrý a vždy připravený jednat</strong>.
+                    </p>
+                    <p>
+                        Z několika pracovních a hlídacích plemen nakonec vznikl pes, který tyto vlastnosti dokonale spojil - dobrman. 
+                        Silný, rychlý, oddaný a s neobyčejnou inteligencí se brzy stal <strong>symbolem věrnosti, disciplíny a preciznosti</strong>.
+                    </p>
+                </div>
+                
+                <div class="brand-story-highlight">
+                    <p>
+                        Stejně jako tehdy dobrman hlídal výběrčího daní, dnes <strong>Daňový dobrman hlídá vaše účetnictví, 
+                        daně a finanční jistotu</strong>.
+                    </p>
+                    <p>
+                        Zajišťuji, aby vše bylo v pořádku, přesné a odevzdané včas. Hlídám zákonné termíny, 
+                        sleduji změny v předpisech a pečuji o vaše podnikání s dobrmaní pozorností a loajalitou.
+                    </p>
+                </div>
+                
+                <p class="brand-story-tagline">
+                    <strong>Daňový dobrman</strong> - spolehlivý partner, který hlídá vaše daně s přesností a oddaností pravého hlídacího psa.
+                </p>
+            </div>
+        </div>
+        
+        <div class="brand-story-slideshow">
+            <div class="dog-slideshow-container">
+                <div class="dog-slide active">
+                    <img src="~/images/dog-vernost.jpg" alt="Věrný dobrman - vedení účetnictví Plzeň" class="dog-image" />
+                </div>
+                <div class="dog-slide">
+                    <img src="~/images/dog-rychlost.jpg" alt="Rychlý dobrman - daňové poradenství" class="dog-image" />
+                </div>
+                <div class="dog-slide">
+                    <img src="~/images/dog-presnost.jpg" alt="Přesný dobrman - účetní služby" class="dog-image" />
+                </div>
+                <div class="dog-slide">
+                    <img src="~/images/dog-inteligence.jpg" alt="Inteligentní dobrman - mzdová agenda" class="dog-image" />
+                </div>
+            </div>
+            <div class="slideshow-content-bottom">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <div class="slide-content">
+                            <div class="slide-icon">🛡️</div>
+                            <h3>Věrnost</h3>
+                            <p>Stejně jako dobrman je věrný svému pánovi, jsem věrná vašemu podnikání</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-icon">⚡</div>
+                            <h3>Rychlost</h3>
+                            <p>Rychlá reakce na změny a včasné plnění termínů</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-icon">🎯</div>
+                            <h3>Přesnost</h3>
+                            <p>Precizní vedení účetnictví bez chyb a nesrovnalostí</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-icon">🧠</div>
+                            <h3>Inteligence</h3>
+                            <p>Chytré řešení daňových situací a optimalizace nákladů</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slideshow-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="approach" class="our-approach" aria-labelledby="approach-title">
+    <h2 id="approach-title">@Model.Texts["ApproachTitle"]</h2>
+    <div class="approach-grid">
+        <div class="approach-item">
+            <div class="approach-icon">📊</div>
+            <h3>@Model.Texts["Approach1_Title"]</h3>
+            <p>@Model.Texts["Approach1_Text"]</p>
+        </div>
+        <div class="approach-item">
+            <div class="approach-icon">🔒</div>
+            <h3>@Model.Texts["Approach2_Title"]</h3>
+            <p>@Model.Texts["Approach2_Text"]</p>
+        </div>
+        <div class="approach-item">
+            <div class="approach-icon">💡</div>
+            <h3>@Model.Texts["Approach3_Title"]</h3>
+            <p>@Model.Texts["Approach3_Text"]</p>
+        </div>
+    </div>
+</section>
+
+<section class="team-image" aria-label="@Model.Texts["TeamImageAlt"]">
+    <div class="team-image-container">
+        <img src="~/images/dog-standing.jpg"
+             alt="@Model.Texts["TeamImageAlt"]"
+             loading="lazy"
+             class="team-photo" />
+        <div class="team-image-overlay">
+            <p class="team-image-text">@Model.Texts["TeamImageText"]</p>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="pricing" aria-labelledby="pricing-title">
+    <h2 id="pricing-title">Ceník účetních služeb 2026</h2>
+    
+    <div class="pricing-container">
+        <!-- Service Category Buttons on the Left -->
+        <div class="pricing-period-selector">
+            <button class="period-btn active" data-service="osvc">
+                <span class="period-text">Daňová evidence (OSVČ)</span>
+            </button>
+            <button class="period-btn" data-service="podvojne">
+                <span class="period-text">Podvojné účetnictví (malé s.r.o.)</span>
+            </button>
+            <button class="period-btn" data-service="mzdy">
+                <span class="period-text">Mzdová agenda</span>
+            </button>
+            <button class="period-btn" data-service="danovepriznani">
+                <span class="period-text">Daňová přiznání</span>
+            </button>
+            <button class="period-btn" data-service="poradenstvi">
+                <span class="period-text">Poradenství a ostatní služby</span>
+            </button>
+        </div>
+        
+        <!-- Pricing Cards Grid -->
+        <div class="pricing-grid">
+            <!-- Plan 1: Start -->
+            <div class="price-plan-1" id="plan-1">
+                <div class="plan-top">
+                    <h3>Start</h3>
+                </div>
+                <div class="plan-cost" data-price-display>od 1 500 Kč</div>
+                <div class="plan-info-1">
+                    <a href="#order" class="btn primary">Objednat službu</a>
+                </div>
+            </div>
+            <!-- Plan 2: Business -->
+            <div class="price-plan-2 featured" id="plan-2">
+                <div class="plan-badge">Nejoblíbenější</div>
+                <div class="plan-top">
+                    <h3>Business</h3>
+                </div>
+                <div class="plan-cost" data-price-display>od 2 200 Kč</div>
+                <div class="plan-info-2">
+                    <a href="#order" class="btn primary">Objednat službu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Timeline Section -->
+<section id="process" class="process-timeline" aria-labelledby="process-title">
+    <h2 id="process-title">@Model.Texts["ProcessTitle"]</h2>
+    <div class="timeline-grid">
+        <div class="step-box-1" id="step-1">
+            <div class="step-header">
+                <div class="step-number">1</div>
+                <h3>@Model.Texts["Process1_Title"]</h3>
+            </div>
+            <p class="step-summary">@Model.Texts["Process1_Brief"]</p>
+            <div class="step-hidden-1">
+                <div class="step-info-1">
+                    <p>@Model.Texts["Process1_Full"]</p>
+                </div>
+            </div>
+        </div>
+        <div class="step-box-2" id="step-2">
+            <div class="step-header">
+                <div class="step-number">2</div>
+                <h3>@Model.Texts["Process2_Title"]</h3>
+            </div>
+            <p class="step-summary">@Model.Texts["Process2_Brief"]</p>
+            <div class="step-hidden-2">
+                <div class="step-info-2">
+                    <p>@Model.Texts["Process2_Full"]</p>
+                </div>
+            </div>
+        </div>
+        <div class="step-box-3" id="step-3">
+            <div class="step-header">
+                <div class="step-number">3</div>
+                <h3>@Model.Texts["Process3_Title"]</h3>
+            </div>
+            <p class="step-summary">@Model.Texts["Process3_Brief"]</p>
+            <div class="step-hidden-3">
+                <div class="step-info-3">
+                    <p>@Model.Texts["Process3_Full"]</p>
+                </div>
+            </div>
+        </div>
+        <div class="step-box-4" id="step-4">
+            <div class="step-header">
+                <div class="step-number">4</div>
+                <h3>@Model.Texts["Process4_Title"]</h3>
+            </div>
+            <p class="step-summary">@Model.Texts["Process4_Brief"]</p>
+            <div class="step-hidden-4">
+                <div class="step-info-4">
+                    <p>@Model.Texts["Process4_Full"]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services" aria-labelledby="services-title">
+    <h2 id="services-title">Co nabízíme</h2>
+    
+    <div class="service-card-modern">
+        <h3 class="service-title">Vedení účetnictví</h3>
+        <p class="service-description">Kompletní vedení účetnictví pro firmy a OSVČ, pravidelné uzávěrky.</p>
+        
+        <div class="service-expandable" id="service-expandable">
+            <h4 class="service-subtitle">Co nabízíme</h4>
+            <ul class="service-list">
+                <li>Zpracování účetních dokladů a vedení účetních knih</li>
+                <li>Digitalizace a archivace dokumentů</li>
+                <li>Online přístup k účetním výkazům 24/7</li>
+                <li>Pravidelné reporty a finanční analýzy</li>
+            </ul>
+            
+            <h4 class="service-subtitle">Způsoby zpracování dokumentů</h4>
+            <div class="processing-methods">
+                <div class="method-item">
+                    <div class="method-icon">🌐</div>
+                    <h5>Online</h5>
+                    <p>Dokumenty zasílejte elektronicky přes internet</p>
+                </div>
+                <div class="method-item">
+                    <div class="method-icon">🏢</div>
+                    <h5>V kanceláři</h5>
+                    <p>Navštivte nás osobně v naší kanceláři</p>
+                </div>
+                <div class="method-item">
+                    <div class="method-icon">🚗</div>
+                    <h5>Osobně u vás</h5>
+                    <p>Přijedeme za vámi přímo do firmy</p>
+                </div>
+            </div>
+            
+            <h4 class="service-subtitle">Proč zvolit naše služby</h4>
+            <p class="service-why">Nabízíme moderní přístup k vedení účetnictví s využitím nejnovějších technologií. Klademe důraz na přesnost, spolehlivost a osobní přístup ke každému klientovi.</p>
+            
+            <a href="#order" class="btn-order-service">Objednat službu</a>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">@Model.Texts["FAQTitle"]</h2>
+    <div class="faq-grid">
+        <div class="faq-item" id="question-1">
+            <button class="faq-question" data-toggle="question-1" aria-expanded="false">
+                <span>@Model.Texts["FAQ1_Question"]</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" class="faq-icon">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>@Model.Texts["FAQ1_Answer"]</p>
+            </div>
+        </div>
+        <div class="faq-item" id="question-2">
+            <button class="faq-question" data-toggle="question-2" aria-expanded="false">
+                <span>@Model.Texts["FAQ2_Question"]</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" class="faq-icon">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>@Model.Texts["FAQ2_Answer"]</p>
+            </div>
+        </div>
+        <div class="faq-item" id="question-3">
+            <button class="faq-question" data-toggle="question-3" aria-expanded="false">
+                <span>@Model.Texts["FAQ3_Question"]</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" class="faq-icon">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>@Model.Texts["FAQ3_Answer"]</p>
+            </div>
+        </div>
+        <div class="faq-item" id="question-4">
+            <button class="faq-question" data-toggle="question-4" aria-expanded="false">
+                <span>@Model.Texts["FAQ4_Question"]</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" class="faq-icon">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>@Model.Texts["FAQ4_Answer"]</p>
+            </div>
+        </div>
+        <div class="faq-item" id="question-5">
+            <button class="faq-question" data-toggle="question-5" aria-expanded="false">
+                <span>@Model.Texts["FAQ5_Question"]</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" class="faq-icon">
+                    <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="faq-answer">
+                <p>@Model.Texts["FAQ5_Answer"]</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="order" class="order" aria-labelledby="order-title">
+    <h2 id="order-title">@Model.Texts["OrderTitle"]</h2>
+
+    <form method="post" enctype="multipart/form-data" novalidate>
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <label>
+                <span>@Model.Texts["FieldName"]</span>
+                <input asp-for="Name" required />
+            </label>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>
+                <span>@Model.Texts["FieldEmail"]</span>
+                <input asp-for="Email" type="email" required />
+            </label>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>
+                <span>@Model.Texts["FieldPhone"]</span>
+                <input asp-for="Phone" />
+            </label>
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>
+                <span>@Model.Texts["FieldMessage"]</span>
+                <textarea asp-for="Message" rows="4"></textarea>
+            </label>
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>
+                <span>📎 Přílohy (volitelné)</span>
+                <input type="file" asp-for="Attachments" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png" />
+                <small class="file-upload-hint">Maximálně 5 souborů, každý do 10 MB. Povolené typy: PDF, Word, Excel, obrázky.</small>
+            </label>
+        </div>
+
+        <div class="form-group captcha-group">
+            <div class="g-recaptcha" data-sitekey="@Model.RecaptchaSiteKey"></div>
+            <input type="hidden" asp-for="RecaptchaResponse" id="recaptchaResponse" />
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn primary">@Model.Texts["SendButton"]</button>
+            <a class="btn outline" href="tel:+420721759410">@Model.Texts["CallButton"]</a>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.Alert))
+        {
+            @if (Model.Alert.Contains("úspěšně") || Model.Alert.Contains("successfully") || Model.Alert.Contains("успішно"))
+            {
+                <div class="alert alert-success">
+                    <span class="alert-icon">✓</span>
+                    <span class="alert-text">@Model.Alert</span>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-error">
+                    <span class="alert-icon">✕</span>
+                    <span class="alert-text">@Model.Alert</span>
+                </div>
+            }
+        }
+    </form>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+    <div class="testimonials-grid">
+        <div class="review-box-1" id="review-1">
+            <div class="review-top">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-short">"@Model.Texts["Testimonial1_Short"]"</p>
+            <div class="review-hidden-1">
+                <div class="review-text-1">
+                    <p class="review-long">@Model.Texts["Testimonial1_Full"]</p>
+                    <p class="review-signature">— @Model.Texts["Testimonial1_Author"]</p>
+                </div>
+            </div>
+        </div>
+        <div class="review-box-2" id="review-2">
+            <div class="review-top">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-short">"@Model.Texts["Testimonial2_Short"]"</p>
+            <div class="review-hidden-2">
+                <div class="review-text-2">
+                    <p class="review-long">@Model.Texts["Testimonial2_Full"]</p>
+                    <p class="review-signature">— @Model.Texts["Testimonial2_Author"]</p>
+                </div>
+            </div>
+        </div>
+        <div class="review-box-3" id="review-3">
+            <div class="review-top">
+                <div class="review-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="review-short">"@Model.Texts["Testimonial3_Short"]"</p>
+            <div class="review-hidden-3">
+                <div class="review-text-3">
+                    <p class="review-long">@Model.Texts["Testimonial3_Full"]</p>
+                    <p class="review-signature">— @Model.Texts["Testimonial3_Author"]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="testimonials-toggle-wrapper">
+        <button type="button" class="testimonials-toggle-btn" id="toggle-all-reviews">
+            <span class="toggle-text-show">@Model.Texts["ShowReviews"]</span>
+            <span class="toggle-text-hide" style="display: none;">@Model.Texts["HideReviews"]</span>
+            <svg class="toggle-chevron" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+</section>
+
